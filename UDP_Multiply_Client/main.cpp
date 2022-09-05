@@ -38,7 +38,7 @@ int main()
 	int TotalLength = 0;
 	int ResultBuffer = 0;
 
-	cout << ResultBuffer << endl;
+	
 	
 	//memset(Buffer, 0, sizeof(Buffer));
 	//cin >> Buffer;

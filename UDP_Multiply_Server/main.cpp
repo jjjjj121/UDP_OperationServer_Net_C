@@ -48,15 +48,14 @@ int main()
 	while (1)
 	{
 
-
-
-
 		//wait for recv
 		SOCKADDR_IN ClientSockADDR;
 		memset(&ClientSockADDR, 0, sizeof(SOCKADDR_IN));
 
 		int ClientSockLength = sizeof(ClientSockADDR);
 
+		//버퍼 초기화
+		memset(&Buffer, 0, sizeof(strlen(Buffer)));
 
 		recvfrom(ServerSocket, Buffer, sizeof(Buffer), 0, (SOCKADDR*)&ClientSockADDR, &ClientSockLength);
 
@@ -66,16 +65,22 @@ int main()
 		
 		MulA = atoi(Buffer);
 
+		cout << MulA << "A";
+
+		//버퍼 초기화
+		memset(&Buffer, 0, sizeof(strlen(Buffer)));
+
 		recvfrom(ServerSocket, Buffer, sizeof(Buffer), 0, (SOCKADDR*)&ClientSockADDR, &ClientSockLength);
 		cout << "Recev IP : " << inet_ntoa(ClientSockADDR.sin_addr) << endl;
 		MulB = atoi(Buffer);
 
+		cout << MulB << "B";
 
 		Result = MulA * MulB;
 
 		memcpy(&ResultBuffer, &Result, 4);
 
-		
+		cout << MulA * MulB;
 
 		//getline(cin, ASendMessage);
 
