@@ -51,15 +51,11 @@ int main()
 	sendto(ServerSocket, ASendMessage.c_str(), strlen(ASendMessage.c_str()), 0, (SOCKADDR*)&ServerSockADDR, sizeof(ServerSockADDR));
 
 
-	//recvfrom(ServerSocket, Buffer, sizeof(Buffer), 0, (SOCKADDR*)&ServerSockADDR, &ServerLength);
-	//printf("recvfrom : %s %s\n", inet_ntoa(ServerSockADDR.sin_addr), Buffer);
-
-
 
 
 	do
 	{
-		RecvLength = recv(ServerSocket, &Buffer[TotalLength], sizeof(Buffer) - TotalLength, 0);
+		RecvLength = recvfrom(ServerSocket, &Buffer[TotalLength], sizeof(Buffer) - TotalLength, 0,(SOCKADDR*)&ServerSockADDR, &ServerLength);
 		TotalLength += RecvLength;
 
 		//cout << TotalLength;

@@ -65,7 +65,7 @@ int main()
 		
 		MulA = atoi(Buffer);
 
-		cout << MulA << "A";
+		
 
 		//버퍼 초기화
 		memset(&Buffer, 0, sizeof(strlen(Buffer)));
@@ -74,7 +74,7 @@ int main()
 		cout << "Recev IP : " << inet_ntoa(ClientSockADDR.sin_addr) << endl;
 		MulB = atoi(Buffer);
 
-		cout << MulB << "B";
+		
 
 		Result = MulA * MulB;
 
@@ -86,15 +86,6 @@ int main()
 
 		//send
 		sendto(ServerSocket, ResultBuffer, 4, 0, (SOCKADDR*)&ClientSockADDR, sizeof(ClientSockADDR));
-
-
-		//for (int i = 0; i < 4; ++i)
-		//{
-		//	sendto(ServerSocket, &ResultBuffer[i] , 1, 0, (SOCKADDR*)&ClientSockADDR, sizeof(ClientSockADDR));
-
-		//	cout << i;
-		//}
-		//cout << ResultBuffer << endl;
 
 		
 	}
