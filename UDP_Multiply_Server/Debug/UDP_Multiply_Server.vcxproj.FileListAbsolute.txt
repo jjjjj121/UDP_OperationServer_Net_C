@@ -1,1 +1,2 @@
 C:\JAEM\0627 TCP_UDP\UDP_Multiply_Server\Debug\UDP_Multiply_Server.exe
+C:\JAEM\0627_UDP Operation\UDP_Multiply_Server\Debug\UDP_Multiply_Server.exe

@@ -75,6 +75,8 @@ int main()
 
 		memcpy(&ResultBuffer, &Result, 4);
 
+		
+
 		//getline(cin, ASendMessage);
 
 		//send

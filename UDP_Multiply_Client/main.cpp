@@ -38,8 +38,8 @@ int main()
 	int TotalLength = 0;
 	int ResultBuffer = 0;
 
-
-
+	cout << ResultBuffer << endl;
+	
 	//memset(Buffer, 0, sizeof(Buffer));
 	//cin >> Buffer;
 
@@ -62,7 +62,7 @@ int main()
 		RecvLength = recv(ServerSocket, &Buffer[TotalLength], sizeof(Buffer) - TotalLength, 0);
 		TotalLength += RecvLength;
 
-		cout << TotalLength;
+		//cout << TotalLength;
 
 	} while (TotalLength < 4);
 
